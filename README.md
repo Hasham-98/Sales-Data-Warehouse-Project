@@ -8,25 +8,25 @@ The goal is to enable efficient data analysis and reporting by organizing data i
 
 The OLTP system is designed for day-to-day transactional operations. The schema includes the following key tables:
 
-    Product: Contains product information, including category and pricing.
-    Order: Records customer orders, including order date and associated salesperson.
-    Customer: Stores customer details such as contact information and demographics.
-    Salesman: Tracks sales team members and their associated details.
-    OrderDetails: Provides a breakdown of products ordered, including quantity and total price.
-    SubCategory and Category: Classify products into hierarchical groups.
-    Address: Stores addresses related to customers and salespeople.
-    Gender: Holds gender-related information for customers.
+    - Product: Contains product information, including category and pricing.
+    - Order: Records customer orders, including order date and associated salesperson.
+    - Customer: Stores customer details such as contact information and demographics.
+    - Salesman: Tracks sales team members and their associated details.
+    - OrderDetails: Provides a breakdown of products ordered, including quantity and total price.
+    - SubCategory and Category: Classify products into hierarchical groups.
+    - Address: Stores addresses related to customers and salespeople.
+    - Gender: Holds gender-related information for customers.
 
 ### 2. DWH Destination
 
 The DWH schema is designed for reporting and analysis. It uses a star schema architecture, which includes:
 
-    Dim_Product: A dimension table for product details, including hierarchical category information.
-    Dim_Customer: A dimension table for customer details, optimized for slicing and dicing data based on customer attributes.
-    Dim_Sales_Man: A dimension table capturing details about sales personnel.
-    DimDate: A date dimension for handling time-based analysis.
-    DimTime: A dimension for detailed time attributes, allowing analysis down to specific time intervals.
-    Fact_Sales: The fact table that stores transactional data, including references to the dimension tables, quantities, and total sales.
+    - Dim_Product: A dimension table for product details, including hierarchical category information.
+    - Dim_Customer: A dimension table for customer details, optimized for slicing and dicing data based on customer attributes.
+    - Dim_Sales_Man: A dimension table capturing details about sales personnel.
+    - DimDate: A date dimension for handling time-based analysis.
+    - DimTime: A dimension for detailed time attributes, allowing analysis down to specific time intervals.
+    - Fact_Sales: The fact table that stores transactional data, including references to the dimension tables, quantities, and total sales.
     
 ### 3. ETL Process
 
